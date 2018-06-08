@@ -22,9 +22,14 @@
                         @endif
 			  		</div>
 
+
 			  		<div class="form-group {{ $errors->has('foto') ? ' has-error' : '' }}">
 			  			<label class="control-label">foto</label>	
-			  			<input type="file" name="foto" class="form-control"  value="{{ $gl->foto }}"  required>
+			  			<input type="file" name="foto" class="form-control"  value="{{ $gl->foto }}" >
+			  			@if(isset($gl)&& $gl->foto)
+			  			<p>
+			  				<br><img src="{{asset('img/'.$gl->foto)}}">
+			  			</p>@endif
 			  			@if ($errors->has('foto'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('foto') }}</strong>

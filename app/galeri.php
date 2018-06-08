@@ -10,6 +10,6 @@ class galeri extends Model
     protected $fillable =array('nama','foto');
 
     public function mobil(){
-    	return $this->hasmany('App\mobil','id_mobil');
+    	return $this->hasmany('App\mobil','id_galeri');
     }
 }

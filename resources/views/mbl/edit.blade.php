@@ -53,8 +53,16 @@
 			  		</div>
 
 			  		<div class="form-group {{ $errors->has('jenis') ? ' has-error' : '' }}">
-			  			<label class="control-label">jenis</label>	
-			  			<input type="text" name="jenis" class="form-control" value="{{ $mobil->jenis }}"  required>
+			  			<label class="control-label">jenis</label><br>	
+			  			<label class="radio-inline">
+                            <input type="radio" name="jenis" id="inlineRadio1" value="Sport">Sport
+                        </label><br>
+                        <label class="radio-inline">
+                            <input type="radio" name="jenis" id="inlineRadio1" value="Sedan">Sedan
+                        </label><br>
+                        <label class="radio-inline">
+                            <input type="radio" name="jenis" id="inlineRadio1" value="MVP">MVP
+                        </label><br>
 			  			@if ($errors->has('jenis'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('jenis') }}</strong>
@@ -83,8 +91,13 @@
 			  		</div>
 
 			  		<div class="form-group {{ $errors->has('type') ? ' has-error' : '' }}">
-			  			<label class="control-label">type</label>	
-			  			<input type="text" name="type" class="form-control" value="{{ $mobil->type }}"  required>
+			  			<label class="control-label">type</label><br>	
+			  			<label class="radio-inline">
+                            <input type="radio" name="type" id="inlineRadio1" value="Matic">Matic
+                        </label><br>
+                        <label class="radio-inline">
+                            <input type="radio" name="type" id="inlineRadio1" value="Manual">Manual
+                        </label><br>
 			  			@if ($errors->has('type'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('type') }}</strong>

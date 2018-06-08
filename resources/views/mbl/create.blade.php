@@ -54,15 +54,24 @@ Add
 @endif
 </div>
 
-<div class="form-group {{ $errors->has('jenis')? 'has error' :'' }}">
-<label class="control-label">jenis</label>
-<input name="jenis" class="form-control"  required></input>
-@if ($errors->has('jenis'))
-<span class="help-block">
-<strong>{{ $errors->first('jenis') }}</strong>
-</span>
-@endif
-</div>
+<div class="form-group {{ $errors->has('jenis') ? ' has-error' : '' }}">
+                        <label class="control-label">Jenis</label>
+                          <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="jenis" id="inlineRadio1" value="Matic">Matic
+                        </label><br>
+                        <label class="radio-inline">
+                            <input type="radio" name="jenis" id="inlineRadio2" value="Sedan">Sedan
+                        </label><br>
+                        <label class="radio-inline">
+                            <input type="radio" name="jenis" id="inlineRadio3" value="Sport">Sport
+                        </label>
+                          @if ($errors->has('jenis'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('jenis') }}</strong>
+                            </span>
+                          @endif
+         </div>
 
 <div class="form-group {{ $errors->has('warna')? 'has error' :'' }}">
 <label class="control-label">warna</label>
@@ -84,22 +93,25 @@ Add
 @endif
 </div>
 
-<div class="form-group {{ $errors->has('type')? 'has error' :'' }}">
-<label class="control-label">type</label>
-<input name="type" class="form-control"  required></input>
-@if ($errors->has('type'))
-<span class="help-block">
-<strong>{{ $errors->first('type') }}</strong>
-</span>
-@endif
-</div>
+<div class="form-group {{ $errors->has('type') ? ' has-error' : '' }}">
+                        <label class="control-label">Type Transmision</label>
+                          <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="type" id="inlineRadio1" value="Matic">MATIC
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="type" id="inlineRadio2" value="Manual">MANUAL
+                        </label>
+                          @if ($errors->has('type'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('type') }}</strong>
+                            </span>
+                          @endif
+            </div>
 
 <div class="form-group {{ $errors->has('id_galeri')? 'has error' :'' }}">
 <label class="control-label">id_galeri</label>
-<select name="id_galeri" class="form-control"  required>
-@foreach($mobil as $data)
-<option value="{{ $data->id_galeri }}">{{ $data->id_galeri }}</option>
-@endforeach </select>
+<input name="id_galeri" class="form-control"  required>
 @if ($errors->has('id_galeri'))
 <span class="help-block">
 <strong>{{ $errors->first('id_galeri') }}</strong>

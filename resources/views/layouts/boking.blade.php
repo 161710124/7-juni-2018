@@ -17,7 +17,7 @@
           <a href="index.html">Home</a>
         </li>
         <li>
-          <a class="active" href="products.html">Boking</a>
+          <a class="active" href="products.html">Data Mobil</a>
         </li>
         <li>
           <a href="about.html">About</a>

@@ -35,7 +35,7 @@
 
 			  		<div class="form-group {{ $errors->has('no_hp') ? ' has-error' : '' }}">
 			  			<label class="control-label">no_hp</label>	
-			  			<textarea name="no_hp" class="form-control" required>{{ $custom->no_hp }}</textarea>
+			  			<input name="no_hp" class="form-control" value="{{ $custom->no_hp }}" required>
 			  			@if ($errors->has('no_hp'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('no_hp') }}</strong>

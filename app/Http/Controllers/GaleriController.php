@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\galeri;
+use App\mobil;
 use Session;
 
 class GaleriController extends Controller
@@ -39,7 +40,7 @@ class GaleriController extends Controller
     {
         $this->validate($request,[
             'nama' => 'required',
-            'foto' => 'required'
+            'foto' => 'image|max:2018'
         ]);
         $gl = galeri::create($request->except('foto'));
         if ($request->hasFile('foto')) {
